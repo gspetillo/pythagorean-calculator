@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pythagorean Calculator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="resources/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="app">
+            <h1 id="app-title">Pythagorean Calculator</h1><br>
+            <form>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="tipoCalculo" id="radioHipotenusa"
+                        value="hipotenusa" checked>
+                    <label class="form-check-label" for="radioHipotenusa">Hipotenusa</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="tipoCalculo" id="radioCateto" value="cateto">
+                    <label class="form-check-label" for="radioCateto">Cateto</label>
+                </div>
+                <br><br>
+                <div class="form-group">
+                    <label for="campo1">Campo 1</label>
+                    <input type="number" class="form-control" id="campo1" placeholder="Campo 1">
+                    <small id="ajuda" class="form-text text-muted">Insira um número real positivo</small>
+                </div>
+                <div class="form-group">
+                    <label for="campo2">Campo 2</label>
+                    <input type="number" class="form-control" id="campo2" placeholder="Campo 2">
+                    <small id="ajuda" class="form-text text-muted">Insira um número real positivo</small>
+
+                </div>
+
+                <button type="submit" class="btn btn-primary">Calcular</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
