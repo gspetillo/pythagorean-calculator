@@ -1,3 +1,24 @@
 body{
     margin: 5%;
 }
+
+#block{
+    max-width: 600px;
+}
+
+#result-box{
+    padding: 5px 2px;
+    color: #fff;
+    background-color: #45a53d;
+    border: 1px solid rgb(42, 139, 42);
+    text-align: center;
+    flex: auto;
+}
+
+#result{
+    font-weight: bold;
+}
+
+#clear{
+    margin: 10px 0;
+}

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-Br">
 
 <head>
     <meta charset="UTF-8">
@@ -12,36 +12,45 @@
 </head>
 
 <body>
-    <div class="container">
+    <div id="block" class="container">
         <div id="app">
             <h1 id="app-title">Pythagorean Calculator</h1><br>
-            <form>
+            <form id="calculator-form">
+                <small id="ajuda-calculo" class="form-text text-muted">Selecione o tipo de cálculo</small>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="tipoCalculo" id="radioHipotenusa"
-                        value="hipotenusa" checked>
-                    <label class="form-check-label" for="radioHipotenusa">Hipotenusa</label>
+                    <input v-model="picked" class="form-check-input" type="radio" name="type" id="hipotenusa"
+                        value="Hipotenusa" v-on:change="calculationType">
+                    <label class="form-check-label" for="hipotenusa">Hipotenusa</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="tipoCalculo" id="radioCateto" value="cateto">
-                    <label class="form-check-label" for="radioCateto">Cateto</label>
+                    <input v-model="picked" class="form-check-input" type="radio" name="type" id="cateto" value="Cateto"
+                        v-on:change="calculationType">
+                    <label class="form-check-label" for="cateto">Cateto</label>
                 </div>
                 <br><br>
-                <div class="form-group">
-                    <label for="campo1">Campo 1</label>
-                    <input type="number" class="form-control" id="campo1" placeholder="Campo 1">
-                    <small id="ajuda" class="form-text text-muted">Insira um número real positivo</small>
+                <div class="row">
+                    <div class="form-group col-sm">
+                        <label for="campo1">{{ formFields.labels[0] }}</label>
+                        <input v-model="field1" v-on:change="calculate" type="number" class="form-control" id="campo1"
+                            placeholder="Ex.: 3">
+                        <small id="ajuda-campo1" class="form-text text-muted">{{formFields.descriptions[0]}}</small>
+                    </div>
+                    <div class="form-group  col-sm">
+                        <label for="campo2">{{ formFields.labels[1] }}</label>
+                        <input v-model="field2" v-on:change="calculate" type="number" class="form-control" id="campo2"
+                            placeholder="Ex.: 4">
+                        <small id="ajuda-campo2" class="form-text text-muted">{{formFields.descriptions[1]}}</small>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="campo2">Campo 2</label>
-                    <input type="number" class="form-control" id="campo2" placeholder="Campo 2">
-                    <small id="ajuda" class="form-text text-muted">Insira um número real positivo</small>
-
-                </div>
-
-                <button type="submit" class="btn btn-primary">Calcular</button>
+                <div id="result-box" class="container">Resultado: <span id="result">{{result}}</span></div>
+                <button v-on:click="clearFields" id="clear" class="btn btn-danger .bg-danger col-sm" type="button">🗑 Limpar</button>
+                <!-- <button type="button" class="btn btn-primary">Calcular</button> -->
             </form>
         </div>
     </div>
+    <!-- Vue JS framework and file import --->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script text="text/javascript" src="resources/js/pythagorean-calculator.js"></script>
 </body>
 
 </html>
