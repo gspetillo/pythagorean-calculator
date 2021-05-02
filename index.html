@@ -14,7 +14,7 @@
 <body>
     <div id="block" class="container">
         <div id="app">
-            <h1 id="app-title">Pythagorean Calculator</h1><br>
+            <h1 id="app-title">💻 Calculadora de <span>Pyth</span>agoras 📐</h1><br>
             <form id="calculator-form">
                 <small id="ajuda-calculo" class="form-text text-muted">Selecione o tipo de cálculo</small>
                 <div class="form-check form-check-inline">
@@ -42,7 +42,7 @@
                         <small id="ajuda-campo2" class="form-text text-muted">{{formFields.descriptions[1]}}</small>
                     </div>
                 </div>
-                <div id="result-box" class="container">Resultado: <span id="result">{{result}}</span></div>
+                <div id="result-box" class="container">🔢 Resultado: <span id="result">{{result}}</span></div>
                 <button v-on:click="clearFields" id="clear" class="btn btn-danger .bg-danger col-sm" type="button">🗑 Limpar</button>
                 <!-- <button type="button" class="btn btn-primary">Calcular</button> -->
             </form>

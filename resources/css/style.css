@@ -2,15 +2,19 @@ body{
     margin: 5%;
 }
 
+h1 span{
+    color: #3367b9;
+}
+
 #block{
-    max-width: 600px;
+    max-width: 650px;
 }
 
 #result-box{
     padding: 5px 2px;
-    color: #fff;
-    background-color: #45a53d;
-    border: 1px solid rgb(42, 139, 42);
+    color: #2a8b2a;
+    background-color: #cff8d3;
+    border: 1px solid #2a8b2a;
     text-align: center;
     flex: auto;
 }
