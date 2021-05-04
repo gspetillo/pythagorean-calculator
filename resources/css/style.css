@@ -1,16 +1,24 @@
-body{
-    margin: 5%;
+body {
+    margin: 10% 5%;
 }
 
-h1 span{
+#app-title {
+    text-align: center;
+}
+
+h1 span {
     color: #3367b9;
 }
 
-#block{
-    max-width: 650px;
+h5 a {
+    color: #3367b9;
 }
 
-#result-box{
+#block {
+    max-width: 90vh;
+}
+
+#result-box {
     padding: 5px 2px;
     color: #2a8b2a;
     background-color: #cff8d3;
@@ -19,10 +27,27 @@ h1 span{
     flex: auto;
 }
 
-#result{
+#result-box {
+    min-width: 100%;
+}
+
+#result {
     font-weight: bold;
 }
 
-#clear{
+.row button {
+    max-width: 49% !important;
+}
+
+#clear, #copy {
     margin: 10px 0;
+}
+
+#footer {
+    padding: 20px 0;
+}
+
+#footer h5 {
+    font-size: 1em;
+    color: grey;
 }

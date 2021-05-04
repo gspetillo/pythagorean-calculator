@@ -6,8 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pythagorean Calculator</title>
+    <!-- Import Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- Import Boostrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="resources/css/style.css">
 </head>
 
@@ -16,15 +19,15 @@
         <div id="app">
             <h1 id="app-title">💻 Calculadora de <span>Pyth</span>agoras 📐</h1><br>
             <form id="calculator-form">
-                <small id="ajuda-calculo" class="form-text text-muted">Selecione o tipo de cálculo</small>
+                <small id="ajuda-calculo" class="form-text text-muted">Selecione o tipo de cálculo:</small>
                 <div class="form-check form-check-inline">
                     <input v-model="picked" class="form-check-input" type="radio" name="type" id="hipotenusa"
-                        value="Hipotenusa" v-on:change="calculationType">
+                        value="Hipotenusa" v-on:change="setLabels">
                     <label class="form-check-label" for="hipotenusa">Hipotenusa</label>
                 </div>
                 <div class="form-check form-check-inline">
                     <input v-model="picked" class="form-check-input" type="radio" name="type" id="cateto" value="Cateto"
-                        v-on:change="calculationType">
+                        v-on:change="setLabels">
                     <label class="form-check-label" for="cateto">Cateto</label>
                 </div>
                 <br><br>
@@ -42,14 +45,25 @@
                         <small id="ajuda-campo2" class="form-text text-muted">{{formFields.descriptions[1]}}</small>
                     </div>
                 </div>
-                <div id="result-box" class="container">🔢 Resultado: <span id="result">{{result}}</span></div>
-                <button v-on:click="clearFields" id="clear" class="btn btn-danger .bg-danger col-sm" type="button">🗑 Limpar</button>
-                <!-- <button type="button" class="btn btn-primary">Calcular</button> -->
+                <div id="result-box" class="container py-2"><i class="bi-dice-5-fill"></i> Resultado: <span
+                        id="result">{{result}}</span></div>
+                <div class="row mx-auto d-flex justify-content-between">
+                    <button v-on:click="copyResultToClipboard" id="copy" class="btn btn-primary col-sm" type="button"><i
+                            class="bi-file-earmark-fill"></i> Copiar</button>
+                    <button v-on:click="clearFields" id="clear" class="btn btn-danger col-sm" type="button"><i
+                            class="bi-trash-fill"></i> Limpar</button>
+                </div>
+                <div id="footer" class="mx-auto my-4 text-center">
+                    <h5 id="devby"> <i class="bi-terminal-fill"></i> Desenvolvido por: <a id="linkedin"
+                            href="https://linkedin.com/in/gabrielpetillo" target="_blank">Gabriel Petillo</a></h5>
+                </div>
             </form>
         </div>
     </div>
-    <!-- Vue JS framework and file import --->
+    <!-- Import VueJS -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- Import SweetAlert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script text="text/javascript" src="resources/js/pythagorean-calculator.js"></script>
 </body>
 
