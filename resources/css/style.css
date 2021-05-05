@@ -7,32 +7,13 @@ body {
     text-align: center;
 }
 
-h1 span {
+h1 span, h1 i {
     color: #3367b9;
 }
 
 h5 a {
     color: #3367b9;
 }
-
-@media screen {
-    #block {
-        max-width: 700px;
-    }
-}
-
-@media screen and (max-width: 775px){
-    #block {
-        max-width: 75vw;
-    }
-}
-
-@media screen and (max-width: 450px){
-    #block {
-        max-width: 95vw;
-    }
-}
-
 
 #result-box {
     display: block;
@@ -64,3 +45,29 @@ h5 a {
     font-size: 1em;
     color: grey;
 }
+
+/*Responsive layout breakpoints*/
+@media screen {
+    #block {
+        max-width: 700px;
+    }
+}
+
+@media screen and (max-width: 770px){
+    #block {
+        max-width: 75vw;
+    }
+}
+
+@media screen and (max-width: 590px){
+    #block {
+        max-width: 95vw;
+    }
+}
+
+@media screen and (max-width: 360px){
+    h1{
+        font-size: 2rem;
+    }
+}
+
