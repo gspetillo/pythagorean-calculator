@@ -7,11 +7,7 @@ body {
     text-align: center;
 }
 
-h1 span, h1 i {
-    color: #3367b9;
-}
-
-h5 a {
+h1 span, h1 i, h5 a {
     color: #3367b9;
 }
 
@@ -59,7 +55,7 @@ h5 a {
     }
 }
 
-@media screen and (max-width: 590px){
+@media screen and (max-width: 585px){
     #block {
         max-width: 95vw;
     }
