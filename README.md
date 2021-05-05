@@ -93,7 +93,7 @@ Development of a simple calculator website for a job interview test.
 The main features of this application are:
 * Calculation of the hypotenuse from the two sides;
 * Calculation of the side from the hypotenuse and the other side;
-* Button to copy the result to the clipboard of the device;
+* Button to copy the result to the device's clipboard;
 * Button to clear form fields;
 
 
@@ -101,7 +101,7 @@ The main features of this application are:
 
 The main technologies used for the development of this project are:
 
-* [Vue JS](https://vuejs.org/)
+* [Vue.js](https://vuejs.org/)
 * [Bootstrap](https://getbootstrap.com)
 
 ### Related Repositories
@@ -130,7 +130,7 @@ There are no specific prerequisites for the execution of this project
    ```
 3. Run the index.html file at the root of the project directory
    ```sh
-   ./index.html
+   start ./index.html
    ```
 
 
@@ -138,9 +138,16 @@ There are no specific prerequisites for the execution of this project
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-This website can be used to perform simple calculations involving the Pythagorean theorem
+This website can be used to perform simple calculations involving the Pythagorean theorem. The main formulas of this theorem used in this project are:
 
-_For examples, please acess [Khan Academy](https://www.khanacademy.org/math/cc-eighth-grade-math/cc-8th-geometry/cc-8th-pythagorean-theorem/v/the-pythagorean-theorem#:~:text=The%20Pythagorean%20theorem%20consists%20of%20a%20formula%20a%5E2%2Bb,triangle%20(Opposite%20and%20Adjacent).)_
+<img src="https://uploads-cdn.omnicalculator.com/images/geometry/area/right-triangle.svg">
+<br><br>
+
+```c = √(a² + b²)```
+
+```a = √(c² - b²)``` or ```b = √(c² - a²)```
+
+_For examples, please acess [Khan Academy](https://www.khanacademy.org/math/cc-eighth-grade-math/cc-8th-geometry/cc-8th-pythagorean-theorem/v/the-pythagorean-theorem#:~:text=The%20Pythagorean%20theorem%20consists%20of%20a%20formula%20a%5E2%2Bb,triangle%20(Opposite%20and%20Adjacent).)_.
 
 
 
@@ -149,13 +156,27 @@ _For examples, please acess [Khan Academy](https://www.khanacademy.org/math/cc-e
 
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+1. Fork the Project _(Fork button on Github)_
+```sh
+start https://github.com/gspetillo/pythagorean-calculator
+```
+2. Create your Feature Branch 
+```sh
+git checkout -b feature/AmazingFeature
+```
+3. Commit your Changes 
+```sh
+git commit -m 'Add some AmazingFeature'
+```
+4. Push to the Branch 
+```sh
+git push origin feature/AmazingFeature
+```
+5. Open a Pull Request _(Pull Request page on Github)_
 
-
+```sh
+start https://github.com/gspetillo/pythagorean-calculator/pulls
+```
 
 <!-- LICENSE -->
 ## License
