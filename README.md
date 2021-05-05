@@ -63,6 +63,7 @@
       <a href="#about-the-project">About The Project</a>
       <ul>
         <li><a href="#built-with">Built With</a></li>
+        <li><a href="#related-repositories">Related Repositories</a></li>
       </ul>
     </li>
     <li>
@@ -73,7 +74,6 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -104,7 +104,7 @@ The main technologies used for the development of this project are:
 * [Vue JS](https://vuejs.org/)
 * [Bootstrap](https://getbootstrap.com)
 
-### Related repositories
+### Related Repositories
 
 Other repositories related to the development of this project:
 
