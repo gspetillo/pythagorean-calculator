@@ -37,12 +37,8 @@ var app = new Vue({
         },
 
         calculateSide() {
-            if(this.field2>=this.field1){
-                return Math.sqrt(Math.pow(this.field2, 2) - Math.pow(this.field1, 2))
-            }else{ 
-                return 'O valor da hipotenusa não pode ser inferior ao do cateto'
-            }
-            
+            side = Math.sqrt(Math.pow(this.field2, 2) - Math.pow(this.field1, 2))
+            return !isNaN(side) && this.field2 >= this.field1 ? side : 'O valor da hipotenusa não pode ser inferior ao do cateto'
         },
 
         clearFields() {
